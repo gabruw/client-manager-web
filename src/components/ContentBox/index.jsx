@@ -4,8 +4,8 @@ import React from 'react';
 
 //#endregion
 
-const City = () => {
+const ContentBox = () => {
     return <></>;
 };
 
-export default City;
+export default ContentBox;

@@ -1,8 +1,7 @@
 //#region Imports
 
-import Home from 'views/in/home';
-import Error from 'views/out/error';
-import Login from 'views/out/login';
+import Home from 'views/home';
+import Error from 'views/error';
 import ROUTE_NAME from './route-name';
 
 //#endregion
@@ -10,24 +9,14 @@ import ROUTE_NAME from './route-name';
 const ROUTES = [
     {
         exact: true,
-        component: Login,
-        path: ROUTE_NAME.OUT.DEFAULT
-    },
-    {
-        exact: true,
-        component: Login,
-        path: ROUTE_NAME.OUT.LOGIN
-    },
-    {
-        exact: true,
-        component: Login,
-        path: ROUTE_NAME.OUT.HOME
+        component: Home,
+        path: ROUTE_NAME.DEFAULT
     },
     {
         exact: true,
         component: Home,
-        path: ROUTE_NAME.IN.HOME
-    },
+        path: ROUTE_NAME.HOME
+    }
     {
         exact: true,
         component: Error,

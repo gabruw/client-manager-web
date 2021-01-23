@@ -4,8 +4,8 @@ import React from 'react';
 
 //#endregion
 
-const Login = () => {
+const SearchForm = () => {
     return <></>;
 };
 
-export default Login;
+export default SearchForm;
