@@ -1,6 +1,6 @@
 {
-    "short_name": "CM",
-    "name": "Client manager",
+    "short_name": "GC",
+    "name": "Github client",
     "icons": [
         {
             "src": "favicon.ico",
