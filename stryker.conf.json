@@ -8,6 +8,6 @@
     "jest": {
         "projectType": "custom",
         "configFile": "./jest.config.js",
-        "enableFindRelatedTests": true
+        "enableFindRelatedTests": false
     }
 }

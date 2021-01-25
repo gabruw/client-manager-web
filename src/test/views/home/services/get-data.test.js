@@ -35,7 +35,7 @@ describe('getRepos', () => {
         const param = '1a2b3crftgyhuj15243';
         const mocked = {
             message: 'Not Found',
-            documentation_url: 'https://docs.github.com/rest/reference/activity#list-repositories-starred-by-a-user'
+            documentation_url: 'https://docs.github.com/rest/reference/repos#list-repositories-for-a-user'
         };
 
         await getRepos(param).catch((error) => {
