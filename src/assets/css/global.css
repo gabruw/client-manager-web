@@ -1,6 +1,8 @@
 html {
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     position: relative;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: 'Geomanist' !important;
 }
@@ -9,5 +11,14 @@ body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background: #f8f8f8;
+}
+
+body:before {
+    top: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+    background: linear-gradient(to right bottom, #b721ff, #21d4fd 75%);
 }

@@ -4,7 +4,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Divider from '@material-ui/core/Divider';
 import Modal from '@material-ui/core/Modal';
 import Typography from '@material-ui/core/Typography';
-import React, { Fragment, useState } from 'react';
+import React, { forwardRef, Fragment, useImperativeHandle, useState } from 'react';
 import useStyles, { useClasses } from './styles';
 
 //#endregion

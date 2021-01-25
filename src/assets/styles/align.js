@@ -3,7 +3,7 @@ const FLEX_CENTER = {
     alignItems: 'center'
 };
 
-export const ALIGN = {
+const ALIGN = {
     LEFT: {
         justifyContent: 'flex-start',
         ...FLEX_CENTER

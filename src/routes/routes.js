@@ -16,7 +16,7 @@ const ROUTES = [
         exact: true,
         component: Home,
         path: ROUTE_NAME.HOME
-    }
+    },
     {
         exact: true,
         component: Error,
