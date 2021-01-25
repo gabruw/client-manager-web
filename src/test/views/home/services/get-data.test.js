@@ -27,6 +27,27 @@ describe('getRepos', () => {
 
         expect(requestStatus === 200 && verifyValues).toEqual(true);
     });
+
+    test('Verifica a integridade do retorno dos dados dos repositórios com um usuário inexistente', async () => {
+        let requestStatus = 400;
+        let requestResult = [];
+
+        const param = '1a2b3crftgyhuj15243';
+        const mocked = {
+            message: 'Not Found',
+            documentation_url: 'https://docs.github.com/rest/reference/activity#list-repositories-starred-by-a-user'
+        };
+
+        await getRepos(param).catch((error) => {
+            requestResult = error.response.data;
+            requestStatus = error.response.status;
+        });
+
+        const verifyValues =
+            requestResult.message === mocked.message && requestResult.documentation_url === mocked.documentation_url;
+
+        expect(requestStatus === 404 && verifyValues).toEqual(true);
+    });
 });
 
 describe('getStarred', () => {
@@ -42,5 +63,26 @@ describe('getStarred', () => {
         });
 
         expect(requestStatus === 200 && requestResult.length === 0).toEqual(true);
+    });
+
+    test('Verifica a integridade do retorno dos dados dos repositórios marcados como favoritos com um usuário inexistente', async () => {
+        let requestStatus = 400;
+        let requestResult = [];
+
+        const param = '1a2b3crftgyhuj15243';
+        const mocked = {
+            message: 'Not Found',
+            documentation_url: 'https://docs.github.com/rest/reference/activity#list-repositories-starred-by-a-user'
+        };
+
+        await getStarred(param).catch((error) => {
+            requestResult = error.response.data;
+            requestStatus = error.response.status;
+        });
+
+        const verifyValues =
+            requestResult.message === mocked.message && requestResult.documentation_url === mocked.documentation_url;
+
+        expect(requestStatus === 404 && verifyValues).toEqual(true);
     });
 });

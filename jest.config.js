@@ -10,11 +10,10 @@ module.exports = {
     },
     setupFiles: ['<rootDir>/node_modules/regenerator-runtime/runtime', 'core-js'],
     testEnvironment: 'node',
-    testMatch: ['**/tests/**/*.[jt]s?(x)'],
+    testMatch: ['**/test/**/*.[jt]s?(x)'],
     testResultsProcessor: 'jest-sonar-reporter',
     transform: {
-        '^.+\\.(js|jsx)?$': 'babel-jest',
-        '^.+\\.(svg|png|jpg)$': '<rootDir>/config/svgTransform.js'
+        '^.+\\.(js|jsx)?$': 'babel-jest'
     },
     transformIgnorePatterns: ['<rootDir>/node_modules/']
 };
