@@ -7,7 +7,7 @@ import useStyles from './styles';
 
 //#endregion
 
-const FieldWrapper = ({ as: Component, name, errors, label, className, normalizer, mask, required, ...rest }) => {
+const FieldWrapper = ({ as: Component, name, errors, label, className, required, ...rest }) => {
     const styles = useStyles();
 
     const componentClass = clsx(styles.component, className);
